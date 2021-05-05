@@ -32,6 +32,11 @@
         tileSize: 512,
         zoomOffset: -1
     }).addTo(mymap);
+    var greenIcon = L.icon({
+            iconUrl: 'images/cof.jpeg',
+
+            iconSize:     [42, 45],
+    });
     L.marker([34.1736734,-118.3541116]).addTo(mymap).bindPopup("<b>Cup of Tea Productions</b>.Estudio de grabación de voiceover ingles.");
     L.marker([46.0735119,-112.9295173]).addTo(mymap).bindPopup("<b>Nintendo of America</b>.Distribuidora de la franquicia en occidente.");
     L.marker([34.9509241,135.7432585]).addTo(mymap).bindPopup("<b>Nintendo HQ</b>.Casa central de la distribuidora.");
