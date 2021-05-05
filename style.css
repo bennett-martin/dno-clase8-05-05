@@ -19,7 +19,7 @@ body {
 
 body.portada{
     background:var(--fondo) url('images/febg.jpeg') right bottom no-repeat;
-    background-size:auto 30%;
+    background-size:auto 40%;
 }
 
 a {
