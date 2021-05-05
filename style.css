@@ -1,142 +1,191 @@
 @charset "UTF-8";
 
-:root {
-    --fondo: #eee;
-    --figura: #222;
-    --destacado: #444;
-    --activo: #000;
+:root{
+    --fondo: #000;
+    --figura: #ddd;
 }
 
-body {
-    color: var(--figura);
-    background: var(--fondo);
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 100%;
-    line-height: 1.6;
-    min-height: 100%;
+* {
     margin: 0;
     padding: 0;
 }
 
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: var(--fondo);
+    color: var(--figura);
+}
+
+body.portada{
+    background:var(--fondo) url('febg.jpeg') right bottom no-repeat;
+    background-size:auto 100%;
+}
+
 a {
-    color: var(--destacado);
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.5);
     text-decoration: none;
 }
 
 a:hover {
-    color: var(--activo);
-    text-decoration: none;
+    color: rgba(255, 255, 255, 0.75);
 }
 
-:hover {
-    transition: all ease 0.2s;
+:hover{
+    transition: all ease .5s;
 }
 
-header,
-main,
-footer {
-    margin-left: 10vw;
-    margin-right: 10vw;
+div.container {
+    width: 80vw;
+    margin: 0 auto;
 }
 
-aside {
-    margin-left: calc(10vw - 1rem);
-    margin-right: calc(10vw - 1rem);
-}
-
-@media screen and (orientation: portrait) {
-    header,
-    main,
-    aside,
-    footer {
-        margin-left: 4vw;
-        margin-right: 4vw;
-    }
-
-    aside {
-        margin-left: calc(4vw - 1rem);
-        margin-right: calc(4vw - 1rem);
-    }
-}
-
-header h1 {
-    margin-top: 2rem;
-    color: var(--destacado);
-}
-
-header nav {
-    padding: 1rem 0;
+nav, footer {
+    width: 98%;
+    margin-left:1%;
+    margin-right:1%;
+    min-height: 10vh;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
 }
 
-header nav form {
-    padding-top: 0.5rem;
-}
-
-header nav button {
-    padding: 0.5rem;
-}
-
-header nav button.escondido {
-    display: none;
-}
-
-main {
-    background: #fff;
-    padding: 1rem;
-    box-shadow: 0 0 4px #ddd;
-}
-
-aside {
-    margin-top: 3vh;
+nav p, footer p {
+    width: 100%;
     display: flex;
-    flex-flow: row wrap;
     justify-content: space-between;
+    margin:auto;
 }
 
-aside div {
-    background: white;
-    overflow: hidden;
-    padding: 1rem;
-    margin: 1rem;
-    width: calc(25% - 4rem);
-    box-shadow: 0 0 4px #ddd;
-    background: #fff;
+.active {
+    text-decoration: underline;
+    color: white;
 }
 
-aside div img {
-    width: calc(100% + 2rem);
-    margin: -1rem -1rem 1rem -1rem;
-    height: auto;
+/* para la página de portada */
+
+header {
+    width: 98%;
+    margin-left:1%;
+    margin-right:1%;
+    min-height: 80vh;
 }
 
-aside div h2 {
-    margin: 0;
-    padding: 0;
-    font-size: 1.2rem;
-    line-height: 1.2;
+header div{
+    width: 50%;
+    padding-top:15vh;
 }
 
-aside div p {
-    font-size: 0.9rem;
+header div h1{
+    font-size:calc(1.5rem + 1vw);
+    line-height: 1;
+    text-shadow: 0 0 2px var(--fondo);
 }
 
-@media screen and (orientation: portrait) {
-    aside div {
-        width: calc(50% - 4rem);
+header div p{
+    margin-top:1rem;
+    line-height: 1.5;
+    text-shadow: 0 0 2px var(--fondo);
+}
+
+@media screen and (orientation:portrait){
+
+    header div{
+        width: 100%;
+        line-height: 1.5;
     }
 }
 
-footer {
-    padding: 5vh 1vw 0 1vw;
-    font-size: 0.9rem;
-    letter-spacing: 0.09rem;
+/* para todas las páginas que no son portada */
+
+main{
+    width: 100%;
+    padding-top:10vh;
+    min-height: 70vh;
 }
 
-footer p {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+/* para la página de películas */
+
+main article{
+    float:left;
+    margin:1%;
+    width:18%;
+    background:rgba(255,255,255,0.1);
+}
+
+main article img{
+    width:100%;
+    height:auto;
+    opacity: 0.6;
+}
+
+main article:hover img{
+    opacity:1;
+}
+
+main article div{
+    padding:5%;
+    min-height:7.5vh;
+}
+
+main article div h2{
+    font-size:1rem;
+    letter-spacing: 0.05rem;
+}
+
+@media screen and (orientation:portrait){
+    main article{
+        width:48%;
+    }
+}
+
+/* para cada página de película */
+
+main section{
+    float:left;
+    margin:3% 1% 10% 1%;
+    width:98%;
+}
+
+main section h1{
+    font-size:calc(1.5rem + 1vw);
+    line-height: 1;
+}
+
+main section h3{
+    font-size:1.3rem;
+    line-height: 2.5;
+}
+
+main section h4{
+    font-size:1.2rem;
+    line-height: 2.5;
+}
+
+main section img{
+    max-width:100%;
+    height:auto;
+    margin:1.5rem 0;
+}
+
+main section p{
+    max-width:100%;
+    line-height: 1.6;
+}
+
+@media screen and (orientation:landscape){
+    main section p{
+        max-width:75%;
+        line-height: 1.8;
+    }
+}
+
+/* para las páginas de locaciones y ganancias */
+
+main div#mapa{
+    margin:1%;
+    width:98%;
+    height:60vh;
+}
+
+main canvas#grafico{
+    background:#111;
 }
