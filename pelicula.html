@@ -10,7 +10,7 @@
     <body>
         <div class="container">
             <nav>
-                <p><a href="index.html">Portada</a> <a href="peliculas.html">Películas</a> <a href="locaciones.html">Locaciones</a> <a href="ganancias.html">Ganancias</a></p>
+                <p><a href="index.html">Portada</a> <a href="peliculas.html">Juegos</a> <a href="locaciones.html">Locaciones</a> <a href="ganancias.html">Ganancias</a></p>
             </nav>
             <main>
                 <section>
@@ -33,7 +33,7 @@
 
                     var n = new URLSearchParams(window.location.search).get('nro');
                     if (n !== null) {
-                        document.querySelector('section').innerHTML = '<h1>' + peliculas[n].name + '</h1><h4>' + peliculas[n].director + ' (' + peliculas[n].year + ')</h4><img src="images/' + peliculas[n].pic_lg + '"><p>' + peliculas[n].description + '</p><h3>Trailer</h3><p>Puedes ver algunas escenas de la película en <a href="' + peliculas[n].trailer + '" target="_blank">Youtube</a><p>';
+                        document.querySelector('section').innerHTML = '<h1>' + peliculas[n].name + '</h1><h4>' + peliculas[n].director + ' (' + peliculas[n].year + ')</h4><img src="images/' + peliculas[n].pic_lg + '"><p>' + peliculas[n].description + '</p><h3>Trailer</h3><p>Puedes ver el trailer de este juego en <a href="' + peliculas[n].trailer + '" target="_blank">Youtube</a><p>';
 
                     } else {
                         document.querySelector('section').innerHTML = '<h1>try again next time :(</h1><h4>Por favor, vuelve a escoger cualquiera de los <a href="peliculas.html">juegos</a></h4>';
