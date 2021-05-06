@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 
 :root{
-    --fondo: #c4c5e4;
+    --fondo: #ff2c3f;
     --figura: #aa5c67;
 }
 
@@ -18,7 +18,7 @@ body {
 }
 
 body.portada{
-    background:var(--fondo) url('images/febg.jpeg') right bottom no-repeat;
+    background:var(--fondo) url('images/cordelia.jpeg') right bottom no-repeat;
     background-size:auto 40%;
 }
 
