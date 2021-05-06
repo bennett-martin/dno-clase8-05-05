@@ -3,7 +3,7 @@
 
 :root{
     --fondo: #ff2c3f;
-    --figura: #aa5c67;
+    --figura: #1E1E24;
 }
 
 * {
@@ -18,7 +18,7 @@ body {
 }
 
 body.portada{
-    background:var(--fondo) url('images/cordelia.jpeg') right bottom no-repeat;
+    background:var(--fondo) url('images/cordelia.jpg') right bottom no-repeat;
     background-size:auto 40%;
 }
 
